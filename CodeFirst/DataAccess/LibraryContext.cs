@@ -1,4 +1,5 @@
 ﻿using CodeFirst.Entities;
+using CodeFirst.Migrations;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -13,7 +14,7 @@ namespace CodeFirst.DataAccess
         public LibraryContext()
             :base("MyLibraryDb")
         {
-            this.Configuration.LazyLoadingEnabled = false;
+            this.Configuration.LazyLoadingEnabled = true;
         }
         public DbSet<Author> Authors { get; set; }
         public DbSet<Book> Books { get; set; }
